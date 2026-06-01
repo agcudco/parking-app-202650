@@ -1,5 +1,6 @@
 package ec.edu.espe.zonas.dtos;
 
+import ec.edu.espe.zonas.entidades.EstadoEspacio;
 import ec.edu.espe.zonas.entidades.TipoEspacio;
 import ec.edu.espe.zonas.entidades.Zona;
 import jakarta.persistence.*;
@@ -18,18 +19,13 @@ import java.util.UUID;
 public class EspacioResponseDto {
 
     private UUID id;
-
     private String codigo;//nombre
-
     private String descripcion;
-
     private TipoEspacio tipo;
-
-    private boolean estado;
-
+    private EstadoEspacio estado;
+    private boolean activo;
     private UUID idZona;
-
+    private String nombreZona;
     private LocalDateTime fechaCreacion;
-
     private LocalDateTime fechaModificacion;
 }

@@ -37,12 +37,14 @@ public class Zona {
     @Column
     private int estado;  //1: activo - 0: inactivo
 
+    @Column
+    private int capacidad;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private TipoZona tipo;
 
     @OneToMany(mappedBy = "zona", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Builder.Default
     private List<Espacio> espacios;
 
     @Column

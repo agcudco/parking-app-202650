@@ -41,6 +41,7 @@ public class ZonaServicioImpl implements ZonaServicio {
         objZona.setNombre(request.getNombre());
         objZona.setCodigo(generarCodigo(request));
         objZona.setDescripcion(request.getDescripcion());
+        objZona.setCapacidad(request.getCapacidad());
         objZona.setTipo(request.getTipo());
 
         repositorioZona.save(objZona);
@@ -65,6 +66,7 @@ public class ZonaServicioImpl implements ZonaServicio {
                 .codigo(objZona.getCodigo())
                 .descripcion(objZona.getDescripcion())
                 .tipo(objZona.getTipo())
+                .capacidad(objZona.getCapacidad())
                 .espacios(objZona.getEspacios())
                 .estado(objZona.getEstado())
                 .fechaCreacion(objZona.getFechaCreacion())

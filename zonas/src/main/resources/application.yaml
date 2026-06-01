@@ -3,9 +3,9 @@ spring:
     name: mi-aplicacion
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/mi_basedatos
+    url: jdbc:postgresql://localhost:5432/zonas_db
     username: postgres
-    password: tu_password
+    password: qwerty123
     driver-class-name: org.postgresql.Driver
 
   jpa:

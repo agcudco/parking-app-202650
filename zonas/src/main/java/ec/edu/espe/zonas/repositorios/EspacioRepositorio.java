@@ -12,7 +12,7 @@ public interface EspacioRepositorio extends JpaRepository<Espacio, UUID> {
 
     List<Espacio> findByZona(UUID idZona);
 
-    List<Espacio> findByZonaAndEstado(UUID idZona, boolean estado);
+    List<Espacio> findByZonaAndEstado(UUID idZona, String estado);
 
-    List<Espacio> findByEstado(boolean estado);
+    List<Espacio> findByEstado(String estado);
 }

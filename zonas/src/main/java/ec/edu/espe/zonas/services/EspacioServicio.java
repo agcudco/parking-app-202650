@@ -1,0 +1,25 @@
+package ec.edu.espe.zonas.services;
+
+import ec.edu.espe.zonas.dtos.EspacioRequestDto;
+import ec.edu.espe.zonas.dtos.EspacioResponseDto;
+import ec.edu.espe.zonas.entidades.EstadoEspacio;
+
+import java.util.List;
+import java.util.UUID;
+
+public interface EspacioServicio {
+
+    List<EspacioResponseDto> obtenerEspacios();
+
+    EspacioResponseDto crearEspacio(EspacioRequestDto dto);
+
+    EspacioResponseDto actualizarEspacio(UUID idEspacio, EspacioRequestDto dto);
+
+    void eliminarEspacio(UUID idEspacio);
+
+    EspacioResponseDto cambiarEstado(UUID idEspacio, EstadoEspacio estado);
+
+    List<EspacioResponseDto> obtenerEspaciosPorEstado(EstadoEspacio estado);
+
+    List<EspacioResponseDto> obtenerEspaciosPorZonaEstado(UUID idZona, EstadoEspacio estado);
+}

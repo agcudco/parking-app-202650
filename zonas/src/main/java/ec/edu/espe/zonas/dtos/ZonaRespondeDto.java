@@ -34,4 +34,6 @@ public class ZonaRespondeDto {
     private LocalDateTime fechaCreacion;
 
     private LocalDateTime fechaModificacion;
+
+    private int capacidad;
 }
